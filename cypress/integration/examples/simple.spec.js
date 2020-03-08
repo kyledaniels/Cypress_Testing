@@ -25,4 +25,11 @@ describe('Browser Action',()=>{
         cy.visit('http://books.toscrape.com/index.html',{timeout:3000})
         cy.url().should('include','index.html')
     })
+
+    it('should click on travel category',()=>{
+        cy.get('a')
+        .contains('Travel')
+        .click()
+        cy.get('h1').contains('Travel')
+    })
 })
