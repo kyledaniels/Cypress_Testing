@@ -20,9 +20,9 @@
 //     })
 // })
 
-describe("Browser Action",()=>{
-    it('Should load website',()=>{
-      cy.visit('http://books.toscrape.com/',{timeout:3000})
-    });
-});
-
+describe('Browser Action',()=>{
+    it('should load url',()=>{
+        cy.visit('http://books.toscrape.com/index.html',{timeout:3000})
+        cy.url().should('include','index.html')
+    })
+})
