@@ -32,4 +32,20 @@ describe('Browser Action',()=>{
         .click()
         cy.get('h1').contains('Travel')
     })
+   it('should count number of books',()=>{
+       cy.get('.product_pod').its('length').should('eq',11)
+   })
+
+
+    it('should click on poetry link',()=>{
+        cy.get('a').contains('Poetry').click()
+    })
+
+    it('should click on book title',()=>{
+        cy.get('a').contains('Olio').click()
+    })
+
+    it('should contain price of book',()=>{
+        cy.get('.price_color').contains('£23.88')
+    })
 })
